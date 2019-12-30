@@ -4,13 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.junit.jupiter.api.Assertions.*;
 
 class RestaurantTest {
 
     @Test
     public void creation(){
-        Restaurant restaurant = new Restaurant("1리터","대전");
+        Restaurant restaurant = new Restaurant(1004L, "1리터", "대전");
         assertThat(restaurant.getName(), is("1리터"));
         assertThat(restaurant.getAddress(), is("대전"));
 
@@ -18,7 +17,7 @@ class RestaurantTest {
 
     @Test
     public void information(){
-        Restaurant restaurant = new Restaurant("1리터","대전");
+        Restaurant restaurant = new Restaurant(1004L, "1리터", "대전");
 
         assertThat(restaurant.getInformation(), is("1리터 in 대전"));
     }
