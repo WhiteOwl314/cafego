@@ -16,4 +16,11 @@ class RestaurantTest {
 
     }
 
+    @Test
+    public void information(){
+        Restaurant restaurant = new Restaurant("1리터","대전");
+
+        assertThat(restaurant.getInformation(), is("1리터 in 대전"));
+    }
+
 }
